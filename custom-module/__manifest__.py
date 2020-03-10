@@ -23,7 +23,7 @@
     'currency': 'Europe'
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    
 
     # always loaded
     'data': [
