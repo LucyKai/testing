@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="make_invisible" model="res.groups">
+        <field name="name">Invisible</field>
+    </record>
+
+    <record model="ir.ui.menu" id="point_of_sale.menu_point_rep">
+        <field name="groups_id" eval="[(6,0,[ref('make_invisible')])]"/>
+    </record>
+
+    <act_window id="action_custom_pos_new" name="POS" res_model="custom.pos" view_mode="tree,form"/>
+    <menuitem id="menu_new_pos"
+        name="POS Category"
+        parent="point_of_sale.menu_point_root"
+        sequence="200"
+        groups="point_of_sale.group_pos_manager"
+        action="action_custom_pos_new"/>
+
+    <record id="view_tree_pos" model="ir.ui.view">
+	    <field name="name">POS Category</field>
+	    <field name="model">custom.pos</field>
+	    <field name="arch" type="xml">
+	        <tree>
+	            <field name="image"/>
+	            <field name="name" />
+                <field name="check"/>
+                <field name="age"/>
+                <field name="salary"/>
+                <field name="datetime"/>
+                <field name="date"/>
+                <field name="hobby"/>
+                <field name="aref"/>
+                <field name="pos"/>
+                <field name="feedback"/>
+                <field name="editview"/>
+	        </tree>
+	    </field>
+	</record>
+
+    <record id="view_form_pos" model="ir.ui.view">
+	    <field name="name">POS Category</field>
+	    <field name="model">custom.pos</field>
+	    <field name="arch" type="xml">
+	        <form>
+            <group>
+                <field name="image"/>
+	            <field name="name" />
+                <field name="check"/>
+                <field name="age"/>
+                <field name="salary"/>
+                <field name="datetime"/>
+                <field name="date"/>
+                <field name="hobby"/>
+                <field name="aref"/>
+                <field name="pos"/>
+                <field name="feedback"/>
+                <field name="editview"/>
+            </group>
+	        </form>
+	    </field>
+	</record>
+</odoo>
