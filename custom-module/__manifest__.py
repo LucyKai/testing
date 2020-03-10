@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "custom-module",
+    'name': "Student Registeration",
 
     'summary': """
         Testing about Odoo""",
