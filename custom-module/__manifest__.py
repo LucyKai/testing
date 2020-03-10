@@ -19,8 +19,6 @@
     'website': "https://www.linkedin.com/in/hilar-ak/",
     'category': "Generic Modules/Human Resources",
     'version': "12.0.1.0.0",
-    'price': 50,
-    'currency': 'Europe',
 
     # any module necessary for this one to work correctly
     # always loaded
